@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
 #
 
 spec.name         = "ShuftiProNFC"
-spec.version      = "1.0.0"
+spec.version      = "3.4.1"
 spec.summary      = "Shufti Pro is designed to verify documents in realtime."
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ spec.description  = <<-DESC
 Shufti Pro has designed this Verification API document for its customers that have signed up for our next-generation service pack. This document will explain various kinds of verification services included in this service pack, how they are provided and what kind of data is required from our clients to perform these verifications successfully.
 DESC
 
-spec.homepage     = "https://github.com/shuftipro/iOS-binary-pod"
+spec.homepage     = "https://github.com/shuftipro/iOS-nfc-binary-pod"
 
 
 # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -68,7 +68,7 @@ spec.platform     = :ios, "13.0"
 #  Supports git, hg, bzr, svn and HTTP.
 #
 
-spec.source       = { :git => "https://github.com/zaidahmedpf/NFCDemo.git", :tag => "#{spec.version}" }
+spec.source       = { :git => "https://github.com/shuftipro/iOS-nfc-binary-pod.git", :tag => "#{spec.version}" }
 
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -80,9 +80,12 @@ spec.source       = { :git => "https://github.com/zaidahmedpf/NFCDemo.git", :tag
 #
 
   spec.ios.vendored_frameworks = 'ShuftiPro.framework'
+  spec.ios.vendored_frameworks = 'NFCPassportReader.framework'
+  spec.ios.vendored_frameworks = 'OpenSSL.xcframework'
+
+
   spec.dependency 'Socket.IO-Client-Swift'
   spec.dependency 'lottie-ios'
-  spec.dependency 'NFCPassportReader'
   spec.swift_version = "5"
 
 # spec.source_files  = "ShuftiPro.framework/Headers/*.h"
