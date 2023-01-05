@@ -80,12 +80,11 @@ spec.source       = { :git => "https://github.com/shuftipro/iOS-nfc-binary-pod.g
 #
 
   spec.ios.vendored_frameworks = 'ShuftiPro.framework'
-  spec.ios.vendored_frameworks = 'NFCPassportReader.framework'
-  spec.ios.vendored_frameworks = 'OpenSSL.xcframework'
-
 
   spec.dependency 'Socket.IO-Client-Swift'
   spec.dependency 'lottie-ios'
+  spec.dependency 'NFCPassportReader' , '1.1.7'
+
   spec.swift_version = "5"
 
 # spec.source_files  = "ShuftiPro.framework/Headers/*.h"
